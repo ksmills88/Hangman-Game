@@ -1,0 +1,164 @@
+<!-- <!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<div>
+    <h1>
+        Hangman
+    </h1>
+    <p><span id="wordToGuess"></span></p>
+</div>
+
+
+<script>
+    var word = "batman";
+    var guesses = ["a", "t"]
+    var wordToDisplay = "";
+    updateDisplay(wordToDisplay);
+
+    var wtgId = document.getElementById("wordToGuess");
+
+    for(var i = 0; i < word.length; i++) {
+        var currentLetter = word.charAt(i);
+
+    // check the letters
+    //If matches in word, add to wordToDisplay
+        if (guesses.indexOf(currentLetter)> -1) {
+  //  console.log("Match");
+        wordToDisplay = wordToDisplay + currentLetter + " ";
+        } else {
+  //  console.log("No Match");
+        wordToDisplay = wordToDisplay + "_ ";
+    }
+
+// _a__a_
+    
+
+    //update the screen
+        updateDisplay(wordToDisplay);
+    }
+        function updateDisplay(newWord) {
+            wtgId.innerText = newWord;
+    }
+    // wtgID.innerText = word;
+
+
+
+//get the guess
+//check if guess is in alphabet
+    //if it is in the alphabet, add to the letters guessed
+//if not, don't do anything
+//check if it is in the word
+//yes 
+    //update the display
+    //see if any letters left to be guessed
+    //wordToGuess = "batman";
+    //leftToGuess = wordToGuess;
+    //leftToGuess = "btmn"; ----what is the logic that is needed here???
+//no
+
+    //you win!!!
+
+    //no
+    //update bad guesses array
+        //update the bad guesses display
+    //if >7   game over
+        //guess again
+
+
+        //create and array for : bad guesses, good guesses, and all guesses?? 
+
+
+// most code will go up into the event listener - onkeyup
+
+
+</script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hang'em High</title>
+</head>
+<body>
+  
+  <div>
+    <h1>Hangman</h1>
+    <p><span id="wordToGuess"></span></p>
+  </div>
+
+
+  <script>
+    var word = "batman";
+    var guesses = ["a", "t"];
+    var wordToDisplay = "";
+
+    var wtgId = document.getElementById("wordToGuess");
+
+    for (var i = 0; i < word.length; i++ ) {
+      var currentLetter = word.charAt(i);
+      // Check the letters
+      // If matches in word, add to wordToDisplay
+      if (guesses.indexOf(currentLetter) > -1) {
+        // console.log("Match");
+        wordToDisplay = wordToDisplay + currentLetter + " ";
+      } else {
+        // No match, add '_' to wordToDisplay
+        wordToDisplay = wordToDisplay + "_ ";
+      }
+      console.log(wordToDisplay);
+
+    }
+
+    updateDisplay(wordToDisplay);
+    
+    function updateDisplay(newWord) {
+      wtgId.innerText = newWord;
+    }
+
+  </script>
+</body>
+</html>
+
+
+
+
+ <!-- Get the guess -->
+
+  <!-- Check if guess in alphabet -->
+      <!-- If not, don't do anything -->
+      <!-- If it is, add to letters guessed  -->
+
+  <!-- Check if it is in the word  -->
+    <!-- Yes -->
+      <!-- Update the display -->
+      <!-- See if any letters left to be guessed  -->
+        <!-- Yes -->
+          <!-- Keep playing -->
+        <!-- No -->
+          <!-- You Win!!!!  -->
+    <!-- No -->
+      <!-- Update bad guesses array
+      update the bad guesses display
+      If > 7 ( var badGuesses = 0;)
+      badGuesses++;
+          Game Over
+      Guess again.
+
+
+Word To Guess
+_ a _ _ a _
+
+Letters already used:
+a, c -->
