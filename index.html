@@ -28,6 +28,8 @@
     <span id="guesses-left"></span>
     </div>
 
+    <a href=index.html><button type="button" class="btn btn-primary">Click Here to Play again</button></a>
+
     <script>
 
         //variables
@@ -39,7 +41,8 @@
         var guessesLeft;
         var underScores = [];
         var userGuesses = [];
-        var randWord;
+        var randWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+        var randWordLength = randWord.length;
         var winCounter = 0;
 
 
@@ -48,13 +51,16 @@
         
         
         function startGame(){
-            randWord = wordBank[Math.floor(Math.random() * wordBank.length)];
-            console.log("random Word =" + randWord);
-            for(var i = 0; i <randWord.length; i++) {
+            //was here ===>randWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+            
+            console.log("random Word = " + randWord + "(length = " + randWordLength + ")");
+            
+            for(var i = 0; i <randWordLength; i++) {
                 underScores.push("_");
+               
             }
             //printing underscores to the screen
-           document.getElementById("word-blanks").textContent = underScores.join(" ");
+            document.getElementById("word-blanks").textContent = underScores.join(" ");
            //reset
            wrongLetter = [];
            guessesLeft = 10;
@@ -65,18 +71,19 @@
 
         function winLose()
         {
+            
             if(winCounter === randWord.length)
             {
                 alert("you win");
-                startGame();
+               // startGame();
             }
             else if(guessesLeft === 0)
             {
-                //document.getElementById("guesses-left").textContent = guessesLeft;
+                document.getElementById("guesses-left").textContent = guessesLeft;
                 alert("you lose");
-                startGame();
-            }
+              //  startGame();
             
+            }
             
         }
 
@@ -107,8 +114,8 @@
                wrongLetter.push(userGuesses);
 
                document.getElementById("wrong-guesses").textContent = wrongLetter;
-               
-               document.getElementById("guesses-left").textContent = guessesLeft - 1;
+               guessesLeft = guessesLeft - 1;
+               document.getElementById("guesses-left").textContent = guessesLeft;
                console.log(wrongLetter);
                winLose();    
            }
