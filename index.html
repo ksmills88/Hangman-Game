@@ -66,25 +66,35 @@
            guessesLeft = 10;
 
            //html
-        //   document.getElementById("guesses-left").textContent = guessesLeft;
+            document.getElementById("guesses-left").textContent = guessesLeft;
         }
 
         function winLose()
         {
             
+                
+               
+            
+            
             if(winCounter === randWord.length)
             {
                 alert("you win");
+                //console.log(underScores)
+                console.log(i=randWordLength)
+                
+                
+                
                // startGame();
             }
+            
             else if(guessesLeft === 0)
             {
                 document.getElementById("guesses-left").textContent = guessesLeft;
                 alert("you lose");
               //  startGame();
             
-            }
             
+            }
         }
 
         // User Guesses
