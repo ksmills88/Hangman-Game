@@ -8,8 +8,12 @@
 </head>
 <body>
 
-
+    <h1><strong>Hangman Game</strong></h1>
+    <p><strong>Disney Characters</strong></p>
+    <p id="you-win"><strong></strong></p>
+    
     <h3> Word to Guess</h3>
+    
 
     <h3 id="word-blanks">_ _ _ _ _ _ _</h3>
 
@@ -28,11 +32,11 @@
 
         //variables
         //======================================
-        var wordBank = ["moana", "disney", "jasmine", "rapunzel"]
+        var wordBank = ["moana", "disney", "jasmine", "rapunzel", "simba", "tiana", "ursula", "kristoff"]
         var wins = 0;
         var loss = 0;
         var wrongLetter = [" "];
-        var guessesLeft = 9;
+        var guessesLeft;
         var underScores = [];
         var userGuesses = [];
         var randWord;
@@ -41,6 +45,8 @@
 
         //Function
         //======================================
+        
+        
         function startGame(){
             randWord = wordBank[Math.floor(Math.random() * wordBank.length)];
             console.log("random Word =" + randWord);
@@ -54,7 +60,7 @@
            guessesLeft = 10;
 
            //html
-           document.getElementById("guesses-left").textContent = guessesLeft;
+        //   document.getElementById("guesses-left").textContent = guessesLeft;
         }
 
         function winLose()
@@ -66,6 +72,7 @@
             }
             else if(guessesLeft === 0)
             {
+                //document.getElementById("guesses-left").textContent = guessesLeft;
                 alert("you lose");
                 startGame();
             }
@@ -77,6 +84,8 @@
         document.onkeyup = function(event)
         {
             userGuesses = event.key;
+            
+            
            
            if(randWord.indexOf(userGuesses) > -1)
            {
