@@ -5,33 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hangman Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 <body>
+    <div class="container-fluid">
+        <h1><strong>Hangman Game</strong></h1>
+        <p><strong>Disney Characters</strong></p>
+        <img src="assets/images/characters3.jpg">
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm col">
+            
+            
+            <div id="imageDiv">
+    <!-- This is a placeholder image to get spacing right -->
+                <!-- <img src=assets/images/moana.jpg> -->
+            </div>
+            <!-- Which character could it be?? -->
+          </div>
+          <div class="col-sm col">
+            <h3> Word to Guess</h3>
+            <h3 id="word-blanks"></h3>
+            <div>
+                <strong>Wrong Guesses: </strong>
+               <span id="wrong-guesses"></span>
+            </div>
+           
+            <div>
+               <strong>Guesses Left: </strong>
+               <span id="guesses-left"></span>
+            </div>
 
-    <h1><strong>Hangman Game</strong></h1>
-    <p><strong>Disney Characters</strong></p>
-    <img src="assets/images/characters.jpg">
-    <div id="imageDiv"></div>
-
-    <p id="you-win"><strong></strong></p>
-    
-    <h3> Word to Guess</h3>
-    
-
-    <h3 id="word-blanks"></h3>
-
-    
-    <div>
-     <strong>Wrong Guesses: </strong>
-    <span id="wrong-guesses"></span>
+          </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <p id="you-win"><strong></strong></p>
+        <div class="row">
+            <div class="col-sm">
+            <a href=index.html><button type="button" class="btn btn-primary">Click Here to Play again</button></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+            <a href="https://disney.com" target="_blank"><img src="assets/images/disney2.jpg" class="disneyLink"></a>
+            </div>
+        </div>
     </div>
 
-    <div>
-    <strong>Guesses Left: </strong>
-    <span id="guesses-left"></span>
-    </div>
 
-    <a href=index.html><button type="button" class="btn btn-primary">Click Here to Play again</button></a>
+
+
+    
+
+        
+    
+    
+    
+
+    
+
+    
+    
+
 
     <script type="text/javascript" src="assets/javascript/game.js"></script>
     <!-- <script>

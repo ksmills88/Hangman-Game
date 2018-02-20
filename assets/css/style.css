@@ -1,0 +1,31 @@
+h1 {
+    color: #2934a0;
+}
+.container-fluid {
+    text-align: center;
+}
+.container {
+    text-align: center;
+    
+    margin-top: 20px;
+    padding: 20px;
+}
+.col {
+    border: 3px solid #4a66f2;
+    margin-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+body {
+    background-color:#f0d8ff;
+    color: #2934a0;
+}
+.row {
+    text-align: center;
+}
+.disneyLink {
+    margin-top: 20px;
+}
+img {
+    border: 6px solid #c3b8fe;
+}
