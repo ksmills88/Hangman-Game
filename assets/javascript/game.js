@@ -39,16 +39,13 @@
         function winLose()
         {
             
-                
-               
-            
-            
             if(winCounter === randWord.length)
             {
                 alert("you win");
                 //console.log(underScores)
                 console.log(i=randWordLength)
-                
+                whichImage();
+                console.log(randWord);
                 
                 
                // startGame();
@@ -58,12 +55,115 @@
             {
                 document.getElementById("guesses-left").textContent = guessesLeft;
                 alert("you lose");
+                whichImage();
               //  startGame();
             
             
             }
         }
 
+        // function image(thisImg) {
+        //     var img = document.createElement("IMG");
+        //     img.src = "../images/"+thisImg;
+        //     document.getElementById("imageDiv").appendChild(img);
+        // }
+
+//===========================
+
+        function whichImage() {
+            if (randWord === "tiana"){
+
+                var img = new Image();
+                var div = document.getElementById('imageDiv');
+                
+                img.onload = function() {
+                div.appendChild(img);
+                };
+                
+                img.src = '../Hangman-Game/assets/images/tiana.jpg';
+            }
+            if (randWord === "moana"){
+
+                var img = new Image();
+                var div = document.getElementById('imageDiv');
+                
+                img.onload = function() {
+                div.appendChild(img);
+                };
+                
+                img.src = '../Hangman-Game/assets/images/moana.jpg';
+            }
+            if (randWord === "jasmine"){
+
+                var img = new Image();
+                var div = document.getElementById('imageDiv');
+                
+                img.onload = function() {
+                div.appendChild(img);
+                };
+                
+                img.src = '../Hangman-Game/assets/images/jasmine.jpg';
+            }
+            if (randWord === "rapunzel"){
+
+                var img = new Image();
+                var div = document.getElementById('imageDiv');
+                
+                img.onload = function() {
+                div.appendChild(img);
+                };
+                
+                img.src = '../Hangman-Game/assets/images/rapunzel.jpg';
+            }
+            if (randWord === "simba"){
+
+                var img = new Image();
+                var div = document.getElementById('imageDiv');
+                
+                img.onload = function() {
+                div.appendChild(img);
+                };
+                
+                img.src = '../Hangman-Game/assets/images/simba.jpg';
+            }
+            if (randWord === "ursula"){
+
+                var img = new Image();
+                var div = document.getElementById('imageDiv');
+                
+                img.onload = function() {
+                div.appendChild(img);
+                };
+                
+                img.src = '../Hangman-Game/assets/images/ursula.jpg';
+            }
+            if (randWord === "kristoff"){
+
+                var img = new Image();
+                var div = document.getElementById('imageDiv');
+                
+                img.onload = function() {
+                div.appendChild(img);
+                };
+                
+                img.src = '../Hangman-Game/assets/images/kristoff.jpg';
+            }
+           
+
+
+
+        }
+
+//=========================
+
+         // function whichImage() {
+         //   if (randWord === "tiana"){
+         //       document.getElementById("imageDiv").textContent ="../images/tiana.jpg";
+        //    } else {}
+        //     if (randWord == "moana"){
+        //         image("mickey.png");
+        //   }
+       // }
         // User Guesses
         document.onkeyup = function(event)
         {
