@@ -11,13 +11,14 @@ h1 {
     padding: 20px;
 }
 .col {
-    border: 3px solid #4a66f2;
+    border: 5px dotted #4a66f2;
     margin-left: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 body {
-    background-color:#f0d8ff;
+    font-family: 'Spectral SC', serif;
+    background-color:#bfd3fd;
     color: #2934a0;
 }
 .row {
@@ -26,6 +27,21 @@ body {
 .disneyLink {
     margin-top: 20px;
 }
+.disneyLink:hover {
+    
+    border-color: #353f9b;
+}
 img {
-    border: 6px solid #c3b8fe;
+    border: 5px solid #4a66f2;
+}
+.underScores {
+    font-weight: 800;
+}
+.btn-primary {
+    background-color: #2934a0;
+    border-color: #2934a0;
+}
+.btn-primary:hover {
+    background-color: #4a66f2;
+    border-color: #4865f1
 }
