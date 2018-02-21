@@ -188,7 +188,9 @@
            }
            else
            {
-               wrongLetter.push(userGuesses);
+                if(!(wrongLetter.indexOf(userGuesses) > -1)) {
+                
+                wrongLetter.push(userGuesses);
 
                document.getElementById("wrong-guesses").textContent = wrongLetter;
                guessesLeft = guessesLeft - 1;
@@ -196,6 +198,7 @@
                console.log(wrongLetter);
                winLose();    
            }
+        }
         }
 
 
